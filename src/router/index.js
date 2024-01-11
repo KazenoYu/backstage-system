@@ -8,16 +8,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/index1',
-      name: 'index1',
-      component: ()=>{ import('../views/testIndex1/index.vue') }
-    },
-    {
-      path: '/index2',
-      name: 'index2',
-      component: ()=>{ import('../views/testIndex2/index.vue') }
     }
   ]
 })

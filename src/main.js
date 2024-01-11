@@ -1,20 +1,22 @@
-import 'vuetify/styles'   // Vuetify styles
-
+import 'vuetify/styles'     // Vuetify styles
+import '@/styles/main.scss' // global css
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createVuetify } from 'vuetify'
 
 import App from './App.vue'
 import router from './router'
+import i18n from './i18n/locale'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import '@/styles/main.scss'
 
+
+const app = createApp(App);
 const vuetify = createVuetify({
     components,
     directives,
 })
-
-createApp(App).use(createPinia()).use(router).use(vuetify).mount('#app')
+app.use(createPinia()).use(router).use(vuetify).use(i18n)
+app.mount('#app')
 
 
