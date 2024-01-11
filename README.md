@@ -1,35 +1,44 @@
 # backstage-system
 
-This template should help get you started developing with Vue 3 in Vite.
+此系統後台是基於：
+* Vue3
+* Vite
+* Vuetify
+* ESLint
+* Prettier
+* Airbnb 程式碼規範
 
-## Recommended IDE Setup
+
+
+## 推薦使用 Visual Studio Code 插件
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## 專案安裝
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 專案啟動
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### 專案打包
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### 指令創建 MPA 專案
+透過指令創建之專案，會於目錄 src/modules 中建立
+注意事項：此指令目前並未使用，在配置上仍依循 SPA 架構進行。
+詳細文章請參閱：https://yugeng.notion.site/Vite-MPA-8f79d94300f143ec8e4278c6c759c64d
 
 ```sh
-npm run lint
+npm run new:module
 ```
