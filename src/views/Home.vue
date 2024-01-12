@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h1 class="hello">Hello</h1>
+  <div class="home">
     <i18nExample />
+    <div class="error">Error</div>
+    <button class="btn">Hi</button>
+    <div class="popup">成功</div>
   </div>
 </template>
 
@@ -10,8 +12,12 @@ import i18nExample from '@/components/i18nExample.vue';
 </script>
 
 <style lang="scss" scoped>
-// h1{
-//   color:$light-blue;
-// }
+// @import '@/styles/mixin.scss';
+.home{
+  @include flex-center;
+}
+  .error{
+  // color:$alert-danger-color;
+}
 </style>
 

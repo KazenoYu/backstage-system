@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
+// import { resolve } from 'path'
 // import fs from 'fs'
 
 // const npm_config_module = process.env.npm_config_module || '';
@@ -19,6 +19,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   // root:"src/modules", // 打包 MPA 專案時啟用的根目錄
   // root:npm_config_module? resolve(__dirname, `./src/modules/${npm_config_module}`) : resolve(__dirname),
+  base:'/',
   plugins: [
     vue(),
   ],
@@ -30,7 +31,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/styles/variables.scss" as *;` // 全域 scss 變數
+        additionalData:
+          `
+            @use "@/styles/variables.scss" as *; 
+            @use "@/styles/mixin.scss" as *;
+          ` // 全域 scss 變數
       }
     }
   },
