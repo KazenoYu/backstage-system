@@ -1,0 +1,15 @@
+// Display flex
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// 文字樣式 mixin
+@mixin text-styles($font-size, $font-color, $line-height, $font-weight: normal) {
+    font-size: $font-size;
+    color: $font-color;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
