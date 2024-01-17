@@ -8,6 +8,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/scss',
+      name: 'scss',
+      component: () => import('../views/ScssExample/Scss.vue')
     }
   ]
 })

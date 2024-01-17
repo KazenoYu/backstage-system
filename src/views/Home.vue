@@ -8,16 +8,12 @@
 </template>
 
 <script setup>
-import i18nExample from '@/components/i18nExample.vue';
+import i18nExample from '@/components/i18nExample.vue'
 </script>
 
 <style lang="scss" scoped>
 // @import '@/styles/mixin.scss';
-.home{
+.home {
   @include flex-center;
 }
-  .error{
-  // color:$alert-danger-color;
-}
 </style>
-

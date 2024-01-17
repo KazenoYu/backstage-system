@@ -26,3 +26,34 @@ $alert-success-color:#67C23A;
 $alert-warning-color:#E6A23C;
 $alert-danger-color:#F56C6C;
 
+
+// 字體相關
+
+// 字體大小
+$base-font-size: 16px; 
+$header-font-size: 24px;
+
+
+// 間距 margin & padding & border
+
+// 預設間距
+$default-margin: 10px;
+$default-padding: 15px;
+$default-border: 1px solid #ddd;
+
+// 按鈕間距
+$button-margin: 10px;
+$button-padding: 15px;
+$button-border: 1px solid #ddd;
+
+// media screen for RWD - breakpoint
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// media screen for RWD - media
+$phone-width: 768px;
+$tablet-width: 992px;
+$desktop-width: 1200px;

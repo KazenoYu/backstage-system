@@ -14,6 +14,17 @@
     }
 }
 
+.form-button{
+    background-color: $secondary-color;
+    color:$text-color3;
+    padding:5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: $blue-light;
+    }
+}
+
 .popup{
     padding: 60px 0;
     width: 330px;
