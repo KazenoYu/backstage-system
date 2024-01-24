@@ -10,9 +10,14 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/scss',
-      name: 'scss',
-      component: () => import('../views/ScssExample/Scss.vue')
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login.vue')
+    },
+    {
+      path: '/weather',
+      name: 'weather',
+      component: () => import('../views/Weather.vue')
     }
   ]
 })

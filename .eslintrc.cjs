@@ -26,7 +26,7 @@ module.exports = {
   },
 
   rules: {
-    // 關閉 Vue 組件名稱應使用多個單詞的規則
+    // 關閉 Vue 組件名稱應使用多個單詞的規則，例如原本要：IndexButton.vue，關閉後可以是 Button.vue
     'vue/multi-word-component-names': 'off',
     // 關閉 vue/valid-template-root 規則，因為 Vue3 已經允許多個根 template
     'vue/valid-template-root': 'off',

@@ -19,10 +19,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   // root:"src/modules", // 打包 MPA 專案時啟用的根目錄
   // root:npm_config_module? resolve(__dirname, `./src/modules/${npm_config_module}`) : resolve(__dirname),
-  base:'/',
-  plugins: [
-    vue(),
-  ],
+  base: '/',
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -31,11 +29,30 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData:
-          `
+        additionalData: `
             @use "@/styles/variables.scss" as *; 
             @use "@/styles/mixin.scss" as *;
           ` // 全域 scss 變數
+      }
+    }
+  },
+  server: {
+    // host: 0.0.0.0, //允許區網透過你的 IP 訪問應用 ( 可選 )
+    proxy: {
+      '/api': {
+        target: 'https://gw.openapi.org.tw', // 政府的 openapi 服務
+        changeOrigin: true, // 是否改寫 origin，true 時會把 header 中的 origin，改成跟 target 一樣的 URL
+        rewrite: (path) => path.replace(/^\/api/, '') // 把 /api 開頭的這一段替換為空
+      },
+      '/weatherApi': {
+        target: 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/', // 政府的 天氣 openapi 服務
+        changeOrigin: true, // 是否改寫 origin，true 時會把 header 中的 origin，改成跟 target 一樣的 URL
+        rewrite: (path) => path.replace(/^\/weatherApi/, '') // 把 /weather 開頭的這一段替換為空
+      },
+      demoApi: {
+        target: 'http://192.168.1.203:9080/erp_backend_service/demo', // 輔翼的 demo
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/demoApi/, '')
       }
     }
   },
